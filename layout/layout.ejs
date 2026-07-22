@@ -4,7 +4,7 @@
 <body>
   <%- partial('_partial/header') %>
   <main class="site-main<%= page.isRegistry ? ' site-main--registry' : '' %>">
-    <div class="container<%= page.isRegistry ? ' container--wide' : '' %>">
+    <div class="container<%= (page.isRegistry || page.wide) ? ' container--wide' : '' %>">
       <%- body %>
     </div>
   </main>
