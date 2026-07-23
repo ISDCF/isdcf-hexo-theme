@@ -7,12 +7,12 @@
   </div>
 </article>
 
-<% var recent = site.posts.sort('-date').limit(5); %>
+<% var recent = site.posts.sort('-date').toArray().sort(function(a, b){ return (b.sticky || 0) - (a.sticky || 0); }).slice(0, 5); %>
 <% if (recent.length) { %>
   <section>
-    <h2 class="section-title">Recent Posts</h2>
+    <h2 class="section-title">Recent Announcements</h2>
     <div class="post-list">
-      <% recent.each(function(post){ %>
+      <% recent.forEach(function(post){ %>
         <%- partial('_partial/article', {post: post, index: true}) %>
       <% }) %>
     </div>
