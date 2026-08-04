@@ -154,12 +154,24 @@ a:hover {
   padding-bottom: 0;
 }
 
+.post-list.post-list--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .post-list.post-list--grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+}
+
 .post__header {
   margin-bottom: 12px;
 }
 
 .post--card .post__title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0 0 6px;
 }
 
@@ -169,7 +181,7 @@ a:hover {
 }
 
 .post__title a {
-  color: var(--color-text);
+  color: var(--color-heading);
 }
 
 .post__title a:hover {

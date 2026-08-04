@@ -27,7 +27,7 @@
 <% if (recent.length) { %>
   <section>
     <h2 class="section-title">Recent Announcements</h2>
-    <div class="post-list">
+    <div class="post-list post-list--grid">
       <% recent.forEach(function(post){ %>
         <%- partial('_partial/article', {post: post, index: true}) %>
       <% }) %>
